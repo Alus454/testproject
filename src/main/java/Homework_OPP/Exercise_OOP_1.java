@@ -1,13 +1,15 @@
 package Homework_OPP;
 
-public class Exercise_OOP {
+public class Exercise_OOP_1 {
 
-    public static void introduce(String name,String surname, int age){
-        Person person = new Person(name, surname, age);
-        System.out.println(person.name+" "+person.surname);
+    public static void introduce(String name, String surname) {
+        Person person = new Person(name, surname);
+        System.out.println(person.name + " " + person.surname);
 
-    }public static void introduce2(String name,String surname, int age,String street, String city,
-                                   String country, int flatNo, int homeNo){
+    }
+
+    public static void person_address(String name, String surname, int age, String street, String city,
+                                      String country, int flatNo, int homeNo) {
         Person person = new Person(name, surname, age, street, city, country, flatNo, homeNo);
         System.out.println(person.name);
         System.out.println(person.surname);
@@ -18,9 +20,24 @@ public class Exercise_OOP {
         System.out.println(person.homeNo);
 
     }
+
+    public static void person(String name, String surname, int age) {
+        Person person = new Person(name, surname, age);
+        System.out.println(person.name + " " + person.surname);
+
+    }
+
+    public static void address(String street, String city, String country, int flatNo, int homeNo) {
+        Address addres = new Address(street, city, country, flatNo, homeNo);
+        System.out.println(addres.city + " " + addres.country);
+
+    }
+
     public static void main(String[] args) {
-        introduce("Bartosz", "Rewers", 30);
-        introduce2("Bartosz", "Rewers", 30, "Głogowska", "Września",
+        introduce("Bartosz", "Rewers");
+        person_address("Bartosz", "Rewers", 30, "Głogowska", "Września",
                 "Polska", 2, 1);
+        person("Bartosz", "Rewers", 30);
+        address("Głogowska", "Września", "Polska", 2, 1);
     }
 }
