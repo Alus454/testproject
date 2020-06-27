@@ -1,4 +1,9 @@
 package Homework_OPP;
 
-public class Figure {
+public abstract class Figure {
+
+    public abstract float countArea();
+
+    public abstract void displayArea();
+
 }
